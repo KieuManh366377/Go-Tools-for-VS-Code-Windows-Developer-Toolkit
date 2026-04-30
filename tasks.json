@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "shell": {
+      "executable": "cmd.exe",
+      "args": ["/d", "/c", "chcp 65001 > nul &&"]
+    }
+  },
+  "tasks": [
+    {
+      "label": "🔍 Go • Check — GoCheckAll.exe (Static analysis + go vet + staticcheck + build amd64/386)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoCheckAll.exe",
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "⚙️ Go • Build — GoBuildRelease.exe (Check → VersionInfo → DLL amd64 + x86 + garble)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoBuildRelease.exe",
+      "args": ["${workspaceFolder}", "${workspaceFolder}\\release"],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "👀 Go • Watch — GoWatcher.exe (Auto-check on *.go save, debounce 800ms)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoWatcher.exe",
+      "isBackground": true,
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "📦 Go • Sync — GoModSync.exe (go mod tidy in parallel for all projects)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoModSync.exe",
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "🧹 Go • Clean — GoClean.exe (Remove *.exe *.dll *.h *.syso + go clean -cache)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoClean.exe",
+      "args": ["/cache"],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    }
+  ]
+}
