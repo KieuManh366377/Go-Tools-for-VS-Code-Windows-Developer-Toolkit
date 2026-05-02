@@ -44,6 +44,13 @@
       "args": ["/cache"],
       "group": "build",
       "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "🆕 Go • New — GoNewProject.exe (Create new Go project from template)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.vscode\\GoNewProject.exe",
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
     }
   ]
 }
