@@ -27,6 +27,7 @@
 - [Author](#-author)
 
 ---
+![Demo Screenshot](https://raw.githubusercontent.com/KieuManh366377/Go-Tools-for-VS-Code-Windows-Developer-Toolkit/main/Go%20Tools%20for%20VS%20Code_2.png)
 
 ## 🎯 The Tools
 
